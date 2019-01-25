@@ -11,7 +11,7 @@ def generate_verification(number, length):
     source = list(string.ascii_uppercase)
     source.extend(map(str, list(range(0, 10))))
     verification_code = set()
-    while(len(verification_code) <= number):
+    while(len(verification_code) < number):
         code = ''
         while len(code) < length:
             code += random.choice(source)
